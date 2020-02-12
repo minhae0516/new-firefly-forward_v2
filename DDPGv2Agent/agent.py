@@ -23,6 +23,8 @@ class Agent():
         self.hidden_dim = hidden_dim
         self.gamma = gamma
         self.tau = tau
+        self.data_path = arg.data_path
+
         print("Running DDPG Agent: using ", self.device)
 
         self.actor = Actor(input_dim, action_dim, hidden_dim).to(self.device)
@@ -112,7 +114,7 @@ class Agent():
             print("Saved to " + self.file)
 
     def load(self, filename):
-        file = '../firefly-inverse-data/trained_agent/'+filename+'.pth.tar'
+        file = self.data_path +'trained_agent/'+filename+'.pth.tar'
         state = torch.load(file, map_location=lambda storage, loc: storage)
         if self.args != state['args']:
             print('Agent parameters from file are different from call')
@@ -129,7 +131,7 @@ class Agent():
         return
 
     def create_save_file(self, filename):
-        path = '../firefly-inverse-data/trained_agent'
+        path = self.data_path+'trained_agent'
         os.makedirs(path, exist_ok=True)
         if filename == None:
             self.file = next_path(path + '/' + 'ddpgmodel_%s.pth.tar')

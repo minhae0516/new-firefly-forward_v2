@@ -54,7 +54,7 @@ rpt_tot = deque(maxlen=50) # reward per time (for fixed duration)
 rpt_tot.append(0)
 policy_loss, value_loss = torch.zeros(1), torch.zeros(1) # initialization
 finetuning = 0 # this is the flag to indicate whether finetuning mode or not (if it is finetuning mode: reward is based on real location)
-AGENT_STORE_FRQ = 1 #25
+AGENT_STORE_FRQ = 2500 #25
 
 
 COLUMNS = ['total time', 'ep', 'std', 'time step', 'Policy NW loss', 'value NW loss','reward','avg_reward', 'goal',
@@ -161,7 +161,7 @@ while tot_t <= arg.TOT_T:
 
 
 
-        if tot_t % 2500 == 0 and tot_t != 0:
+        if tot_t % AGENT_STORE_FRQ == 0 and tot_t != 0:
             agent.save(filename, episode)
 
         # update variables
