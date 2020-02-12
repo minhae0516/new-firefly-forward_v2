@@ -12,7 +12,7 @@ from .terminal import *
 
 from FireflyEnv.env_utils import is_pos_def, vectorLowerCholesky, sample_exp, range_angle
 from FireflyEnv.firefly_task import dynamics
-from FireflyEnv.plotter_gym import Render
+#from FireflyEnv.plotter_gym import Render
 
 
 class BeliefStep(nn.Module):
