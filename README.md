@@ -2,8 +2,8 @@
 
 These codes are for the forward control of the firefly project. 
 
-The code is working with a later version that Torch ver. 1.2.0 and Python ver. 3.7. 
-Besides, to use the same path setup as this code to store data, try to build the folder `new-firefly-forward_v2-data` at the same level as the folder that includes the codes. In order words, this set of codes `new-firefly-forward_v2` and `new-firefly-forward_v2-data` should be located at the same path level. The folder `new-firefly-forward_v2-data` should includes two folders `new-firefly-forward_v2-data/trained_agent` and `new-firefly-forward_v2-data/data`.
+The codes are working with a later version that Torch ver. 1.2.0 and Python ver. 3.7. 
+Besides, to use the same path setup as this code to store data, try to build the folder `new-firefly-forward_v2-data` at the same level as the folder that includes the codes. In order words, this set of codes `new-firefly-forward_v2` and `new-firefly-forward_v2-data` should be located at the same path level. The folder `new-firefly-forward_v2-data` should include two folders `new-firefly-forward_v2-data/trained_agent` and `new-firefly-forward_v2-data/data`.
 You can also change the code to change where to store data. 
 
 
